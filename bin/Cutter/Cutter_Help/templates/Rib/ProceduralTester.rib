@@ -1,0 +1,40 @@
+Option "ribparse" "string varsubst" ["$"]
+Option "searchpath" "shader"    ["/Users/malcolmkesson/Documents/maya/rfm_scripts/nodes:@"]
+Option "searchpath" "rixplugin" ["${RMSTREE}/lib/shaders:/Users/malcolmkesson/Documents/maya/rfm_scripts/nodes:@"]
+Option "searchpath" "texture"   ["../textures:@"]
+Option "searchpath" "archive"   ["../archives:Cutter_Help/templates/Rib:custom_templates/Rib"]
+#Option "statistics" "endofframe" [1]
+Integrator "PxrOcclusion" "PxrOcclusion1" "int useAlbedo" [1]
+PixelVariance 0.5
+
+Format 1280 720 1
+Display "untitled" "it" "rgba"
+Projection "perspective" "fov" [20]
+
+Translate  0 0 100
+Rotate -30 1 0 0
+Rotate  45 0 1 0
+Scale 1 1 -1
+WorldBegin
+		Bxdf "PxrSurface" "default"
+		"color diffuseColor" [0.6 0.6 0.6]
+		"float diffuseGain" [1.0]
+		"int diffuseDoubleSided" [1]
+	TransformBegin
+		Scale 8 8 8
+		ReadArchive "cutrAxes.rib"
+	TransformEnd
+
+	AttributeBegin
+		Attribute "identifier" "string name" ["Proc"]
+		Translate 0 1 0
+		Procedural "DynamicLoad" ["FULLPATH_TO_DSO.so" "200 .25"]
+								 [-100000 100000 -100000 100000 -100000 100000]
+	AttributeEnd
+	AttributeBegin
+		Attribute "identifier" "string name" ["plane1"]
+		Scale 100 1 100
+		Polygon "P" [-0.5 0 -0.5  -0.5 0 0.5  0.5 0 0.5  0.5 0 -0.5]
+				"st" [0 0  0 1  1 1  1 0]
+	AttributeEnd
+WorldEnd

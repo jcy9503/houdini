@@ -1,0 +1,21 @@
+    Launched at: 2022_3_5_4.9:34
+    Neither the MAYA_APP_DIR nor the MAYA_USER_DIR environment variable has been set.
+    Warning: DirPresetsPanel.addDefaultDirectories() - cannot find maya at "C:/Documents and Settings/My Documents/maya".
+    Warning: DirPresetsPanel.addDefaultDirectories() - cannot find maya at "C:/Users/Documents/maya".
+    Error: OslUtils.getAnyBin() - cannot find Arnold or Rman!
+    Error: OslUtils.getAnyBin() - cannot find Arnold or Rman!
+Cutter version: 8.3.6
+[CutterLF is a minor extension of MetalLF - UI_Delegates.CutterLF]
+Built: Thursday April 22 2021
+Host OS is Windows 10
+Users account name is "jcy95"
+The environment variable "CUTTER_USERS_DIR" has not been found.
+The environment variable "CUTTER_APP_DIR" has not been found.
+Users $HOME directory is "C:\Users\jcy95"
+Users PWD is "C:\HOU\bin\Cutter"
+
+    Info:KAbstractWindow.removeMayaClient table size is 0
+    Info:KAbstractWindow.removeMayaClient table size is 0
+    Warning: Preferences.updateBackup() regenerating "prefs.ini"
+    Error 2: Preferences.updateBackup() unable to read "prefs.ini"
+Cutter exited at 2022_3_5_11.51:31460

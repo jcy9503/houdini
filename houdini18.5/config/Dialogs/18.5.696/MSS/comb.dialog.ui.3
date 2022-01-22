@@ -1,0 +1,48 @@
+// Magic: 9e3525bf
+// Automatically generated PSI dialog (PSI version 18.5.696)
+// Sat Oct 16 23:39:04 2021
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+showguide.gad = ROW
+{
+    
+
+    {  }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("showguide", "Show Guide Geometry") toggle VALUE(showguide.val);
+
+    {  }
+
+}
+
+guidescale.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ guidescale.label = PARM_LABEL("Guide Scale", "guidescale");
+ PARM(float, 1, "guidescale", none, field) RANGE(0,1)
+	 LABELREF(guidescale.label) HSTRETCH;
+
+}
+
+# warning cpp warning: "GenV3/subdialog.top.ui":12 Macro "PARMSPACING" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":13 Macro "LAYOUTDIR" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":14 Macro "LOOK_PLAIN" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":15 Macro "DO_JUSTIFY" redefined.  Using later definition
+dialog_norm.gad = 
+{
+    LAYOUT(horizontal) SPACING(0.05) HSTRETCH  JUSTIFY(left, center)
+    showguide.gad; 
+    guidescale.gad; 
+} 
+// dialog.bot.ui
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) VALUE(open.val_) HSTRETCH
+
+    dialog_norm.gad;
+}

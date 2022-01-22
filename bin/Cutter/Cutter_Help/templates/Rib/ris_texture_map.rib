@@ -1,0 +1,19 @@
+Pattern "PxrManifold2D" "PxrManifold2D1"
+		"float angle" [0]
+		"float scaleS" [1]
+		"float scaleT" [1]
+		"float offsetS" [0]
+		"float offsetT" [0]
+		"int invertT" [0]
+		# "PxrManifold2D1:result"
+
+# txmake -mode periodic ../tiffs/IMAGE_NAME.tif ../textures/IMAGE_NAME.tex
+Pattern "PxrTexture" "PxrTexture1"
+		"string filename" ["IMAGE_NAME.tex"]
+		"int invertT" [1]
+		"int linearize" [1]
+		"reference struct manifold" ["PxrManifold2D1:result"]
+
+Bxdf "PxrSurface" "PxrSurface1"
+		"float diffuseGain" [1.0]
+		"reference color diffuseColor" ["PxrTexture1:resultRGB"]

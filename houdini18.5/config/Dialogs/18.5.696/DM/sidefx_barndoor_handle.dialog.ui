@@ -1,0 +1,137 @@
+// Magic: cc2e38a9
+// Automatically generated PSI dialog (PSI version 18.5.696)
+// Sat Oct 23 00:05:04 2021
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+tx.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ tx.label = PARM_LABEL("Tx", "tx") WIDTH(1.5);
+ PARM(float, 1, "tx", none, none) RANGE(0,1)
+	 LABELREF(tx.label) HSTRETCH;
+
+}
+
+ty.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ ty.label = PARM_LABEL("Ty", "ty") WIDTH(1.5);
+ PARM(float, 1, "ty", none, none) RANGE(0,1)
+	 LABELREF(ty.label) HSTRETCH;
+
+}
+
+tz.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ tz.label = PARM_LABEL("Tz", "tz") WIDTH(1.5);
+ PARM(float, 1, "tz", none, none) RANGE(0,1)
+	 LABELREF(tz.label) HSTRETCH;
+
+}
+
+rx.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ rx.label = PARM_LABEL("Rx", "rx") WIDTH(1.5);
+ PARM(float, 1, "rx", none, none) RANGE(0,360)
+	 LABELREF(rx.label) HSTRETCH;
+
+}
+
+ry.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ ry.label = PARM_LABEL("Ry", "ry") WIDTH(1.5);
+ PARM(float, 1, "ry", none, none) RANGE(0,360)
+	 LABELREF(ry.label) HSTRETCH;
+
+}
+
+rz.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ rz.label = PARM_LABEL("Rz", "rz") WIDTH(1.5);
+ PARM(float, 1, "rz", none, none) RANGE(0,360)
+	 LABELREF(rz.label) HSTRETCH;
+
+}
+
+barndoorleft.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ barndoorleft.label = PARM_LABEL("Barndoor Left", "barndoorleft") WIDTH(1.5);
+ PARM(float, 1, "barndoorleft", none, none) RANGE(0,1)
+	 LABELREF(barndoorleft.label) HSTRETCH;
+
+}
+
+barndoorright.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ barndoorright.label = PARM_LABEL("Barndoor Right", "barndoorright") WIDTH(1.5);
+ PARM(float, 1, "barndoorright", none, none) RANGE(0,1)
+	 LABELREF(barndoorright.label) HSTRETCH;
+
+}
+
+barndoortop.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ barndoortop.label = PARM_LABEL("Barndoor Top", "barndoortop") WIDTH(1.5);
+ PARM(float, 1, "barndoortop", none, none) RANGE(0,1)
+	 LABELREF(barndoortop.label) HSTRETCH;
+
+}
+
+barndoorbottom.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ barndoorbottom.label = PARM_LABEL("Barndoor Bottom", "barndoorbottom") WIDTH(1.5);
+ PARM(float, 1, "barndoorbottom", none, none) RANGE(0,1)
+	 LABELREF(barndoorbottom.label) HSTRETCH;
+
+}
+
+# warning cpp warning: "GenV3/subdialog.top.ui":5 Macro "PARMSPACING" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":6 Macro "LAYOUTDIR" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":7 Macro "LOOK_PLAIN" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":8 Macro "DO_JUSTIFY" redefined.  Using later definition
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    tx.gad; 
+    ty.gad; 
+    tz.gad; 
+    rx.gad; 
+    ry.gad; 
+    rz.gad; 
+    barndoorleft.gad; 
+    barndoorright.gad; 
+    barndoortop.gad; 
+    barndoorbottom.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

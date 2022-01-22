@@ -1,0 +1,22 @@
+===================================
+DATE: Friday 15 October 2021 at 0:15 AM
+VERSION: 8.3.6
+---
+openedPath: C:\HOU\houdini18.5\script\vfl\move_point.vfl
+closedPath: C:\HOU\houdini18.5\script\vfl\move_point.vfl
+openedAt: Friday 15 October 2021 at 0:14 AM
+closedAt: Friday 15 October 2021 at 0:15 AM
+openedBytes: 106
+closedBytes: 106
+saved: 1
+===================================
+DATE: Wednesday 5 January 2022 at 11:51 PM
+VERSION: 8.3.6
+---
+openedPath: C:\HOU\houdini18.5\script\vfl\movePoint.vfl
+closedPath: C:\HOU\houdini18.5\script\vfl\movePoint.vfl
+openedAt: Wednesday 5 January 2022 at 4:13 PM
+closedAt: Wednesday 5 January 2022 at 11:51 PM
+openedBytes: 23
+closedBytes: 93
+saved: 2

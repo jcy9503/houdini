@@ -1,0 +1,1601 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Python prman.Ri Bindings</TITLE>
+<LINK rel=StyleSheet href="RELATIVE_PATH.css" TYPE="text/css" TITLE="YOUR_STYLE_NAME">
+
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P>
+Generated Feb 24th 2019 using,<BR>
+<code>import prman<BR>
+    help(prman.Ri)</code><BR>
+</P>
+<BR>
+<pre>
+Help on class Ri in module prman:
+
+class Ri(Ri)
+ |  # Ri class exposes the Ri entrypoints defined in the prman module.
+ |  # Additionally, we intercept the Declare call to ensure a python-side
+ |  # declartion for global tokens.  We also expose python tokens for
+ |  # standard Ri tokens and vars:  RI_RGBA, RiBezierBasis, etc.
+ |  
+ |  Method resolution order:
+ |      Ri
+ |      Ri
+ |      __builtin__.object
+ |  
+ |  Methods defined here:
+ |  
+ |  Declare(self, name, decl)
+ |  
+ |  StandardStructureHints(self)
+ |  
+ |  __init__(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  A = 'varying float a'
+ |  
+ |  ABORT = 'uniform int abort'
+ |  
+ |  ADD = 'add'
+ |  
+ |  ADDCOVERAGE = 'uniform float addcoverage'
+ |  
+ |  AI = 'ai'
+ |  
+ |  ALGORITHM = 'uniform string algorithm'
+ |  
+ |  AMBIENTLIGHT = 'ambientlight'
+ |  
+ |  AMPLITUDE = 'uniform float amplitude'
+ |  
+ |  APERTURE = 'uniform float[4] aperture'
+ |  
+ |  ARCHIVE = 'uniform string archive'
+ |  
+ |  ATMOSPHERES = 'constant int atmospheres'
+ |  
+ |  ATRIBUTECOMBINING = 'uniform string attributecombining'
+ |  
+ |  AUTOBIAS = 'constant int autobias'
+ |  
+ |  AZ = 'az'
+ |  
+ |  AZI = 'azi'
+ |  
+ |  BACKFACETOLERANCE = 'uniform float backfacetolerance'
+ |  
+ |  BACKFACING = 'uniform int backfacing'
+ |  
+ |  BACKGROUND = 'uniform color background'
+ |  
+ |  BAKE = 'bake'
+ |  
+ |  BEAMDISTRIBUTION = 'uniform float beamdistribution'
+ |  
+ |  BESSEL = 'bessel'
+ |  
+ |  BEZIER = 'bezier'
+ |  
+ |  BEZIERSTEP = 3
+ |  
+ |  BIAS = 'constant float bias'
+ |  
+ |  BIAS0 = 'uniform float bias0'
+ |  
+ |  BIAS1 = 'uniform float bias1'
+ |  
+ |  BICUBIC = 'bicubic'
+ |  
+ |  BILINEAR = 'bilinear'
+ |  
+ |  BINARY = 'uniform int binary'
+ |  
+ |  BINARYFORCE = 'uniform int twiceasslowwithmoreartifacts'
+ |  
+ |  BLACK = 'black'
+ |  
+ |  BLACKMANHARRIS = 'blackman-harris'
+ |  
+ |  BLP = 'blp'
+ |  
+ |  BOUND = 'float[6] __bound'
+ |  
+ |  BOUND0 = 'float[6] __bound0'
+ |  
+ |  BOUND1 = 'float[6] __bound1'
+ |  
+ |  BOX = 'box'
+ |  
+ |  BRICKMEMORY = 'uniform int brickmemory'
+ |  
+ |  BSPLINE = 'b-spline'
+ |  
+ |  BSPLINESTEP = 1
+ |  
+ |  BSplineBasis = 'BSplineBasis'
+ |  
+ |  BUCKET = 'bucket'
+ |  
+ |  BUCKETSIZE = 'uniform int[2] bucketsize'
+ |  
+ |  BUCKETSTRIDE = 'uniform int[2] bucketstride'
+ |  
+ |  BUMPY = 'bumpy'
+ |  
+ |  BesselFilter = 'BesselFilter'
+ |  
+ |  BezierBasis = 'BezierBasis'
+ |  
+ |  BlackmanHarrisFilter = 'BlackmanHarrisFilter'
+ |  
+ |  BoxFilter = 'BoxFilter'
+ |  
+ |  CACHEDIFFUSECOLORS = 'uniform int cachediffusecolors'
+ |  
+ |  CACHEMODE = 'uniform int __cachemode'
+ |  
+ |  CAMERA = 'uniform int camera'
+ |  
+ |  CAMERAHITMODE = 'string camerahitmode'
+ |  
+ |  CATMARK = 'catmull-clark'
+ |  
+ |  CATMULLROMSTEP = 1
+ |  
+ |  CATROM = 'catmull-rom'
+ |  
+ |  CENTERED = 'uniform int centered'
+ |  
+ |  CENTERFILTER = 'uniform int centerfilter'
+ |  
+ |  CHANLIST = 'uniform string chanlist'
+ |  
+ |  CHECKNANS = 'uniform int checknans'
+ |  
+ |  CI = 'varying color Ci'
+ |  
+ |  CLAMP = 'clamp'
+ |  
+ |  CLAMPCOLOR = 'uniform float[2] clampcolor'
+ |  
+ |  CLAMPED = 'uniform string clamped'
+ |  
+ |  CLAMPINGENABLE = 'uniform int clampingenable'
+ |  
+ |  CLAMPMOTION = 'uniform int clampmotion'
+ |  
+ |  CLAMPWIDTH = 'constant int clampwidth'
+ |  
+ |  CLEARLOCALS = 'uniform int clearlocals'
+ |  
+ |  CLIPPING = 'uniform float[2] Clipping'
+ |  
+ |  CLIPPINGPLANE = 'uniform float[6] ClippingPlane'
+ |  
+ |  COLOR = 'uniform color Color'
+ |  
+ |  COLORCLAMP = 'uniform float[2] colorclamp'
+ |  
+ |  COMBINED = 'combined'
+ |  
+ |  COMMENT = 'comment'
+ |  
+ |  COMPRESSION = 'uniform string compression'
+ |  
+ |  COMPRESSIONQ = 'uniform string compressionquality'
+ |  
+ |  CONDABORT = 'conditionalabort'
+ |  
+ |  CONEANGLE = 'uniform float coneangle'
+ |  
+ |  CONEDELTAANGLE = 'uniform float conedeltaangle'
+ |  
+ |  CONSTANT = 'constant'
+ |  
+ |  CONSTANTWIDTH = 'constant float constantwidth'
+ |  
+ |  CONTINUATIONBYDEFAULT = 'uniform int continuationbydefault'
+ |  
+ |  COORDINATESYSTEM = 'uniform string CoordinateSystem'
+ |  
+ |  CORNER = 'corner'
+ |  
+ |  CPUTIME = 'uniform float __CPUtime'
+ |  
+ |  CREASE = 'crease'
+ |  
+ |  CROPWINDOW = 'uniform float[4] CropWindow'
+ |  
+ |  CS = 'varying color Cs'
+ |  
+ |  CUBIC = 'cubic'
+ |  
+ |  CULL = 'cull'
+ |  
+ |  CURRENT = 'current'
+ |  
+ |  CURVATURE = 'curvature'
+ |  
+ |  CURVATURE_U = 'curvature_u'
+ |  
+ |  CURVATURE_V = 'curvature_v'
+ |  
+ |  CURVE = 'curve'
+ |  
+ |  CatmullRomBasis = 'CatmullRomBasis'
+ |  
+ |  CatmullRomFilter = 'CatmullRomFilter'
+ |  
+ |  DARKFALLOFF = 'constant float darkfalloff'
+ |  
+ |  DEBUG = 'uniform int debug'
+ |  
+ |  DECIMATIONRATE = 'uniform float decimationrate'
+ |  
+ |  DEEPSHADOWERROR = 'uniform float deepshadowerror'
+ |  
+ |  DEEPSHADOWMEMORY = 'uniform int deepshadowmemory'
+ |  
+ |  DEEPSHADOWSIMPLIFYERROR = 'uniform float deepshadowsimplifyerror'
+ |  
+ |  DEEPSHADOWTILES = 'uniform int deepshadowtiles'
+ |  
+ |  DEFCACHE = 'uniform float defcache'
+ |  
+ |  DEFINITION = 'string definition'
+ |  
+ |  DELETELIGHTS = 'deletelights'
+ |  
+ |  DEPTHBIAS = 'uniform float depthbias'
+ |  
+ |  DEPTHCUE = 'depthcue'
+ |  
+ |  DEPTHFILTER = 'uniform string depthfilter'
+ |  
+ |  DEPTHMODE = 'uniform string depthmode'
+ |  
+ |  DEPTHOFFIELD = 'uniform float[3] DepthOfField'
+ |  
+ |  DERIVATIVES = 'derivatives'
+ |  
+ |  DETAIL = 'uniform float[6] Detail'
+ |  
+ |  DETAILRANGE = 'uniform float[4] DetailRange'
+ |  
+ |  DFAMODE = 'uniform int dfamode'
+ |  
+ |  DICE = 'dice'
+ |  
+ |  DICEMETHOD = 'uniform string dicemethod'
+ |  
+ |  DIFFERENCE = 'difference'
+ |  
+ |  DIFFUSE = 'uniform int diffuse'
+ |  
+ |  DIFFUSEHITMODE = 'string diffusehitmode'
+ |  
+ |  DISABLE = 'uniform int disable'
+ |  
+ |  DISABLELIGHTS = 'string disablelights'
+ |  
+ |  DISK = 'disk'
+ |  
+ |  DISPLACEMENT = 'uniform float displacement'
+ |  
+ |  DISPLACEMENTBOUND = 'displacementbound'
+ |  
+ |  DISPLACEMENTS = 'constant int displacements'
+ |  
+ |  DISPLACE_RATIOS = 'uniform float[2] displace_ratios'
+ |  
+ |  DISPLAY = 'uniform string display'
+ |  
+ |  DISPLAYEXPOSURE = 'uniform float[2] exposure'
+ |  
+ |  DISPLAYONLYEDITLIGHTS = 'uniform int displayonlyeditlights'
+ |  
+ |  DISPLAYOPACITYCHAN = 'uniform string opacity'
+ |  
+ |  DISPLAYQUANTIZE = 'uniform int[4] quantize'
+ |  
+ |  DISTANCE = 'uniform float distance'
+ |  
+ |  DISTANTLIGHT = 'distantlight'
+ |  
+ |  DITHER = 'uniform float dither'
+ |  
+ |  DOF = 'uniform string dof'
+ |  
+ |  DOFASPECT = 'uniform float[2] dofaspect'
+ |  
+ |  DOUBLECOMP = 'doublecomp'
+ |  
+ |  DOUBLESHADED = 'uniform int doubleshaded'
+ |  
+ |  DPDTIME = 'vertex vector dPdtime'
+ |  
+ |  DPDU = 'vertex vector dPdu'
+ |  
+ |  DPDV = 'vertex vector dPdv'
+ |  
+ |  DSOBound = 'DSOBound'
+ |  
+ |  DSOFILE = 'uniform string dsofile'
+ |  
+ |  DSOFLOAT = 'uniform float dsofloat'
+ |  
+ |  DSONAME = 'string __dsoname'
+ |  
+ |  DSOPARAM = 'uniform int dsoparam'
+ |  
+ |  DSOSTRING = 'uniform string dsostring'
+ |  
+ |  DYNAMIC = 'uniform int dynamic'
+ |  
+ |  DiskFilter = 'DiskFilter'
+ |  
+ |  EDGEEDIT = 'edgeedit'
+ |  
+ |  EDITLIGHTS = 'string editlights'
+ |  
+ |  EMISSIONBIAS = 'constant float emissionbias'
+ |  
+ |  EMISSIONPOINTCLOUD = 'uniform string emissionpointcloud'
+ |  
+ |  EMIT = 'uniform int emit'
+ |  
+ |  EMPTY = ''
+ |  
+ |  ENABLE = 'uniform int enable'
+ |  
+ |  ENABLEGAUSSIAN = 'uniform float enable_gaussian'
+ |  
+ |  ENABLELERP = 'uniform float enable_lerp'
+ |  
+ |  ENABLELIGHTS = 'uniform string enablelights'
+ |  
+ |  ENDOFFRAME = 'uniform int endofframe'
+ |  
+ |  EPSILON = 1e-10
+ |  
+ |  EPSILON1 = 'uniform float epsilon1'
+ |  
+ |  EPSILON2 = 'uniform float epsilon2'
+ |  
+ |  EXCLUSIVE = 'exclusive'
+ |  
+ |  EXITAT = 'uniform int exitat'
+ |  
+ |  EXPOSURE = 'uniform float[2] Exposure'
+ |  
+ |  EXTRAPOLATE = 'uniform int extrapolate'
+ |  
+ |  EXTREMEDISPLACEMENT = 'uniform int extremedisplacement'
+ |  
+ |  EXTREMEMOTIONDOF = 'uniform int extrememotiondof'
+ |  
+ |  EYESPLITS = 'uniform int eyesplits'
+ |  
+ |  ErrorAbort = 'ErrorAbort'
+ |  
+ |  ErrorCleanup = 'ErrorCleanup'
+ |  
+ |  ErrorCondAbort = 'ErrorCondAbort'
+ |  
+ |  ErrorIgnore = 'ErrorIgnore'
+ |  
+ |  ErrorPrint = 'ErrorPrint'
+ |  
+ |  ErrorPrintOnce = 'ErrorPrintOnce'
+ |  
+ |  FACEEDIT = 'faceedit'
+ |  
+ |  FACEINDEX = '__faceindex'
+ |  
+ |  FACEVARYINGINTERPBOUNDARY = 'facevaryinginterpolateboundary'
+ |  
+ |  FALLOFFPOWER = 'varying float falloffpower'
+ |  
+ |  FALSE = 0
+ |  
+ |  FILE = 'constant string file'
+ |  
+ |  FILEMODE = 'uniform string filemode'
+ |  
+ |  FILENAME = 'uniform string filename'
+ |  
+ |  FILTER = 'uniform string filter'
+ |  
+ |  FILTERING = 'int filtering'
+ |  
+ |  FILTERWIDTH = 'uniform float[2] filterwidth'
+ |  
+ |  FINISHRENDERING = 'finishrendering'
+ |  
+ |  FLATNESS = 'uniform float flatness'
+ |  
+ |  FOCUSFACTOR = 'uniform float focusfactor'
+ |  
+ |  FOCUSREGION = 'uniform float focusregion'
+ |  
+ |  FOG = 'fog'
+ |  
+ |  FORCEDSAMPLING = 'uniform int forcedsampling'
+ |  
+ |  FORMATPIXELASPECTRATIO = 'uniform float FormatPixelAspectRatio'
+ |  
+ |  FORMATRESOLUTION = 'uniform int[2] FormatResolution'
+ |  
+ |  FOV = 'uniform float fov'
+ |  
+ |  FRAME = 'frame'
+ |  
+ |  FRAMEASPECTRATIO = 'uniform float FrameAspectRatio'
+ |  
+ |  FRAMEBUFFER = 'constant string framebuffer'
+ |  
+ |  FRAMECAMERA = 'framecamera'
+ |  
+ |  FREQUENCYFRAMETIME = 'uniform float frequencyframetime'
+ |  
+ |  FROM = 'uniform point from'
+ |  
+ |  FRUSTUM = 'uniform int frustum'
+ |  
+ |  GAUSSIAN = 'gaussian'
+ |  
+ |  GEOCACHEMEMORY = 'uniform int geocachememory'
+ |  
+ |  GEOMETRICAPPROXIMATIONFLATNESS = 'uniform float GeometricApproximation...
+ |  
+ |  GEOMETRICAPPROXIMATIONFOCUSFACTOR = 'uniform float GeometricApproximat...
+ |  
+ |  GEOMETRICAPPROXIMATIONMOTIONFACTOR = 'uniform float GeometricApproxima...
+ |  
+ |  GPRIMLOG = 'uniform string[2] gprimlog'
+ |  
+ |  GPRIMSPLITS = 'uniform int gprimsplits'
+ |  
+ |  GRIDAREA = 'uniform float[2] gridarea'
+ |  
+ |  GRIDCACHESIZE = 'gridcachesize'
+ |  
+ |  GRIDMEMORY = 'uniform int gridmemory'
+ |  
+ |  GRIDS = 'grids'
+ |  
+ |  GRIDSIZE = 'uniform int gridsize'
+ |  
+ |  GROUPING = 'grouping'
+ |  
+ |  GRP_MEMBERSHIP = 'uniform string membership'
+ |  
+ |  GRP_TRACESUBSET = 'uniform string tracesubset'
+ |  
+ |  GaussianFilter = 'GaussianFilter'
+ |  
+ |  HAIR = 'uniform int hair'
+ |  
+ |  HANDLE = 'uniform string handle'
+ |  
+ |  HANDLEID = 'uniform string __handleid'
+ |  
+ |  HANDLER = 'handler'
+ |  
+ |  HEMISPHERESAMPLEMEMORY = 'uniform int hemispheresamplememory'
+ |  
+ |  HERMITE = 'hermite'
+ |  
+ |  HERMITESTEP = 2
+ |  
+ |  HIDDEN = 'uniform int hidden'
+ |  
+ |  HOLE = 'hole'
+ |  
+ |  HermiteBasis = 'HermiteBasis'
+ |  
+ |  I = 'i'
+ |  
+ |  ID = 'uniform int id'
+ |  
+ |  IDENTIFIER = 'identifier'
+ |  
+ |  IGNORE = 'ignore'
+ |  
+ |  ILLUMINATEHANDLE = 'uniform string IlluminateHandle'
+ |  
+ |  IMMEDIATESUBDIVIDE = 'int __immediatesubdivide'
+ |  
+ |  IMPORTANCETHRESHOLD = 'importancethreshold'
+ |  
+ |  INDEXOFREFRACTION = 'uniform float indexofrefraction'
+ |  
+ |  INFINITY = 1e+38
+ |  
+ |  INSIDE = 'inside'
+ |  
+ |  INTENSITY = 'uniform float intensity'
+ |  
+ |  INTERLEAVE = 'uniform string interleave'
+ |  
+ |  INTERPBOUNDARY = 'interpolateboundary'
+ |  
+ |  INTERPRETATION = 'uniform string interpretation'
+ |  
+ |  INTERSECTION = 'intersection'
+ |  
+ |  INTERSECTPRIORITY = 'uniform int intersectpriority'
+ |  
+ |  INTERVAL = 'uniform int interval'
+ |  
+ |  JITTER = 'uniform int jitter'
+ |  
+ |  KA = 'uniform float Ka'
+ |  
+ |  KD = 'uniform float Kd'
+ |  
+ |  KEEPFILES = 'uniform int keepfiles'
+ |  
+ |  KR = 'uniform float Kr'
+ |  
+ |  KS = 'uniform float Ks'
+ |  
+ |  LAGRANGIAN = 'lagrangian'
+ |  
+ |  LANCZOS = 'lanczos'
+ |  
+ |  LEVELSET = 'constant float levelset'
+ |  
+ |  LH = 'lh'
+ |  
+ |  LIGHT = 'light'
+ |  
+ |  LIGHTCOLOR = 'uniform color lightcolor'
+ |  
+ |  LIGHTING = 'lighting'
+ |  
+ |  LIMITS = 'limits'
+ |  
+ |  LINEAR = 'linear'
+ |  
+ |  LODRANGE = 'uniform int[2] lodrange'
+ |  
+ |  LOOP = 'loop'
+ |  
+ |  LPEGROUP = 'uniform string lpegroup'
+ |  
+ |  LanczosFilter = 'LanczosFilter'
+ |  
+ |  MARCH = 'uniform int march'
+ |  
+ |  MATRIXCACHEMEMORY = 'uniform int matrixcachememory'
+ |  
+ |  MATTE = 'uniform int Matte'
+ |  
+ |  MATTEFILE = 'uniform string mattefile'
+ |  
+ |  MAXANGLE = 'uniform int maxangle'
+ |  
+ |  MAXDEPTH = 'constant int maxdepth'
+ |  
+ |  MAXDIFFUSEDEPTH = 'constant int maxdiffusedepth'
+ |  
+ |  MAXDISTANCE = 'uniform float maxdistance'
+ |  
+ |  MAXERROR = 'uniform float maxerror'
+ |  
+ |  MAXHAIRLENGTH = 'uniform int maxhairlength'
+ |  
+ |  MAXHAIRVOLUME = 'uniform int maxhairvolume'
+ |  
+ |  MAXPATHLENGTH = 'uniform int maxpathlength'
+ |  
+ |  MAXPIXELDIST = 'uniform float maxpixeldist'
+ |  
+ |  MAXRAYDEPTH = 'constant int maxraydepth'
+ |  
+ |  MAXSPECULARDEPTH = 'constant int maxspeculardepth'
+ |  
+ |  MAXVPDEPTH = 'constant int maxvpdepth'
+ |  
+ |  MERGE = 'uniform int merge'
+ |  
+ |  METAL = 'metal'
+ |  
+ |  MIDPOINT = 'uniform int midpoint'
+ |  
+ |  MINDISTANCE = 'uniform float mindistance'
+ |  
+ |  MINMAX = 'uniform int minmax'
+ |  
+ |  MINWIDTH = 'constant float minwidth'
+ |  
+ |  MITCHELL = 'mitchell'
+ |  
+ |  MODE = 'string mode'
+ |  
+ |  MOTIONFACTOR = 'uniform float motionfactor'
+ |  
+ |  MPCACHE = 'uniform int mpcache'
+ |  
+ |  MPCACHEDIR = 'uniform string mpcachedir'
+ |  
+ |  MPCACHESTRIDE = 'uniform int mpcachestride'
+ |  
+ |  MPMEMORY = 'uniform int mpmemory'
+ |  
+ |  MULTIGRIDS = 'uniform int multigrids'
+ |  
+ |  MitchellFilter = 'MitchellFilter'
+ |  
+ |  N = 'varying normal N'
+ |  
+ |  NAME = 'uniform string name'
+ |  
+ |  NDC = 'NDC'
+ |  
+ |  NEARHITHER = 'uniform float nearhither'
+ |  
+ |  NEWER = 'uniform int newer'
+ |  
+ |  NEWGROUP = 'uniform int newgroup'
+ |  
+ |  NG = 'uniform normal Ng'
+ |  
+ |  NONPERIODIC = 'nonperiodic'
+ |  
+ |  NONUNIFORM = 'uniform int nonuniform'
+ |  
+ |  NP = 'uniform normal Np'
+ |  
+ |  NURBCURVATUREDICEFACTOR = 'uniform int nurbcurvaturedicefactor'
+ |  
+ |  OBJECT = 'object'
+ |  
+ |  OBJECTCACHE = 'uniform float objectcache'
+ |  
+ |  OCCLUSIONBOUND = 'uniform float occlusionbound'
+ |  
+ |  OCTREEMEMORY = 'uniform int octreememory'
+ |  
+ |  OFFSET = 'uniform float offset'
+ |  
+ |  OI = 'varying color Oi'
+ |  
+ |  OLDMOTIONFACTOR = 'uniform float oldmotionfactor'
+ |  
+ |  OPACITY = 'uniform color Opacity'
+ |  
+ |  OPACITYCACHEMEMORY = 'uniform int opacitycachememory'
+ |  
+ |  OPACITYMETHOD = 'uniform string opacitymethod'
+ |  
+ |  OPACITYMULTIPLIER = 'uniform float opacitymultiplier'
+ |  
+ |  OPAQUE = 'opaque'
+ |  
+ |  ORDER = 'uniform string order'
+ |  
+ |  ORDERORIGIN = 'uniform int[2] orderorigin'
+ |  
+ |  ORIENTATION = 'uniform string Orientation'
+ |  
+ |  ORIGIN = 'uniform int[2] origin'
+ |  
+ |  ORTHOGRAPHIC = 'orthographic'
+ |  
+ |  OS = 'varying color Os'
+ |  
+ |  OTHRESHOLD = 'uniform color othreshold'
+ |  
+ |  OUTPUTALLDECLARES = 'uniform int outputalldeclares'
+ |  
+ |  OUTSIDE = 'outside'
+ |  
+ |  P = 'vertex point P'
+ |  
+ |  PAINT = 'paint'
+ |  
+ |  PAINTEDPLASTIC = 'paintedplastic'
+ |  
+ |  PATTERN = 'uniform string pattern'
+ |  
+ |  PDISC = 'uniform int pdisc'
+ |  
+ |  PERIODIC = 'periodic'
+ |  
+ |  PERSISTENT = 'persistent'
+ |  
+ |  PERSPECTIVE = 'perspective'
+ |  
+ |  PIXELFILTERNAME = 'uniform string PixelFilterName'
+ |  
+ |  PIXELFILTERWIDTH = 'uniform float[2] PixelFilterWidth'
+ |  
+ |  PIXELSAMPLES = 'uniform float[2] PixelSamples'
+ |  
+ |  PIXELVARIANCE = 'uniform float PixelVariance'
+ |  
+ |  PLANARPROJECTION = 'uniform string planarprojection'
+ |  
+ |  PLASTIC = 'plastic'
+ |  
+ |  POINTFALLOFFPOWER = 'uniform float pointfalloffpower'
+ |  
+ |  POINTLIGHT = 'pointlight'
+ |  
+ |  POINTMEMORY = 'uniform int pointmemory'
+ |  
+ |  POWER = 'power'
+ |  
+ |  POWERSTEP = 4
+ |  
+ |  PREBIAS = 'uniform float prebias'
+ |  
+ |  PRECISION = 'uniform int precision'
+ |  
+ |  PRESERVECV = 'uniform int preservecv'
+ |  
+ |  PRIMITIVE = 'primitive'
+ |  
+ |  PRINT = 'uniform int print'
+ |  
+ |  PRINTONCE = 'printonce'
+ |  
+ |  PRMAN_VERSION = (22, 3, 1923583, '')
+ |  
+ |  PRMAN_VERSION_STR = '22.3'
+ |  
+ |  PROCEDURAL = 'uniform string procedural'
+ |  
+ |  PROJECTIONNAME = 'uniform string ProjectionName'
+ |  
+ |  PT = 'vertex float Pt'
+ |  
+ |  PTEXTUREMAXFILES = 'uniform int ptexturemaxfiles'
+ |  
+ |  PTEXTUREMEMORY = 'uniform int ptexturememory'
+ |  
+ |  PVN = 'uniform float[4] pvn'
+ |  
+ |  PW = 'vertex hpoint Pw'
+ |  
+ |  PYRAMID = 'uniform int pyramid'
+ |  
+ |  PYRAMIDENABLE = 'uniform int pyramidenable'
+ |  
+ |  PZ = 'vertex float Pz'
+ |  
+ |  PowerBasis = 'PowerBasis'
+ |  
+ |  Proc2DelayedReadArchive = 'Proc2DelayedReadArchive'
+ |  
+ |  Proc2DynamicLoad = 'Proc2DynamicLoad'
+ |  
+ |  ProcDelayedReadArchive = 'ProcDelayedReadArchive'
+ |  
+ |  ProcDynamicLoad = 'ProcDynamicLoad'
+ |  
+ |  ProcRunProgram = 'ProcRunProgram'
+ |  
+ |  QUANTIZEDITHER = 'uniform float QuantizeDither'
+ |  
+ |  QUANTIZERANGE = 'uniform int[3] QuantizeRange'
+ |  
+ |  QUANTIZETYPE = 'uniform string QuantizeType'
+ |  
+ |  R = 'r'
+ |  
+ |  RADIOSITYCACHEMEMORY = 'uniform int radiositycachememory'
+ |  
+ |  RADIOSITYCACHEOMITMINUSONE = 'uniform int radiositycacheomitminusone'
+ |  
+ |  RADIUS = 'varying float radius'
+ |  
+ |  RASTER = 'raster'
+ |  
+ |  RASTERORIENT = 'uniform int rasterorient'
+ |  
+ |  RAYDEPTH = 'constant int raydepth'
+ |  
+ |  RAYTRACE = 'raytrace'
+ |  
+ |  RAY_KAYJIYA = 'kay-kajiya'
+ |  
+ |  RAY_LIST = 'list'
+ |  
+ |  RAY_TREE = 'tree'
+ |  
+ |  REFLECTEXCLUDESUBSET = 'uniform string reflectexcludesubset'
+ |  
+ |  REFLECTION = 'uniform int reflection'
+ |  
+ |  REFLECTSUBSET = 'uniform string reflectsubset'
+ |  
+ |  REFWARNING = 'uniform int refwarning'
+ |  
+ |  RELATIVEDETAIL = 'uniform float RelativeDetail'
+ |  
+ |  RELATIVEPIXELVARIANCE = 'uniform float relativepixelvariance'
+ |  
+ |  RELATIVESHADINGRATE = 'uniform float relativeshadingrate'
+ |  
+ |  RELIGHTING = 'relighting'
+ |  
+ |  REMAP = 'constant float[3] remap'
+ |  
+ |  RENDER = 'Ri:render'
+ |  
+ |  RENDERMEMORY = 'uniform float rendermemory'
+ |  
+ |  RENDERNULL = 'Ri:rendernull'
+ |  
+ |  RENDERTIME = 'uniform int rendertime'
+ |  
+ |  REPELFILE = 'uniform string repelfile'
+ |  
+ |  REPELPARAMS = 'uniform float repelparams'
+ |  
+ |  RERENDERBAKEDBDIR = 'uniform string rerenderbakedbdir'
+ |  
+ |  RESETRELATIVESHADINGRATE = 'uniform float resetrelativeshadingrate'
+ |  
+ |  RESIZE = 'uniform string resize'
+ |  
+ |  RESOLUTION = 'uniform float[2] resolution'
+ |  
+ |  RESOLUTIONUNIT = 'uniform string resolutionunit'
+ |  
+ |  RESOURCE = 'uniform string resource'
+ |  
+ |  REVERSEORIENTATION = 'uniform int ReverseOrientation'
+ |  
+ |  REVERSESIGN = 'uniform int reversesign'
+ |  
+ |  RGB = 'rgb'
+ |  
+ |  RGBA = 'rgba'
+ |  
+ |  RGBAI = 'rgbai'
+ |  
+ |  RGBAZ = 'rgbaz'
+ |  
+ |  RGBAZI = 'rgbazi'
+ |  
+ |  RGBI = 'rgbi'
+ |  
+ |  RGBZ = 'rgbz'
+ |  
+ |  RGBZI = 'rgbzi'
+ |  
+ |  RH = 'rh'
+ |  
+ |  RIB = 'rib'
+ |  
+ |  RIBPARSE = 'ribparse'
+ |  
+ |  RIFCONTROL = 'rifcontrol'
+ |  
+ |  RIXPLUGIN = 'uniform string rixplugin'
+ |  
+ |  ROUGHNESS = 'uniform float roughness'
+ |  
+ |  ROWSPERSTRIP = 'uniform string rowsperstrip'
+ |  
+ |  RUNFLAGS = '_runflags'
+ |  
+ |  S = 'varying float s'
+ |  
+ |  SAMPLEMOTION = 'constant int samplemotion'
+ |  
+ |  SAVEDATTRIBUTES = 'string __savedattributes'
+ |  
+ |  SAVESHADERSTATE = 'uniform int saveshaderstate'
+ |  
+ |  SCOPEDCOORDINATESYSTEM = 'uniform string ScopedCoordinateSystem'
+ |  
+ |  SCOPENAMES = 'scopenames'
+ |  
+ |  SCREEN = 'screen'
+ |  
+ |  SCREENWINDOW = 'uniform float[4] ScreenWindow'
+ |  
+ |  SEARCHPATH = 'searchpath'
+ |  
+ |  SENSE = 'uniform string sense'
+ |  
+ |  SEPARATE = 'separate'
+ |  
+ |  SEPCATROM = 'separable-catmull-rom'
+ |  
+ |  SHADE = 'shade'
+ |  
+ |  SHADEGROUPS = 'uniform int shadegroups'
+ |  
+ |  SHADEGROUPSIZEFACTOR = 'uniform float shadegroupsizefactor'
+ |  
+ |  SHADEQUEUESIZEFACTOR = 'uniform float shadequeuesizefactor'
+ |  
+ |  SHADER = 'uniform string shader'
+ |  
+ |  SHADERINSTANCEID = 'constant string __instanceid'
+ |  
+ |  SHADERPROFILE = 'uniform string shaderprofile'
+ |  
+ |  SHADESIZE = 'uniform int shadesize'
+ |  
+ |  SHADEWCACHE = 'shadewithcache'
+ |  
+ |  SHADING = 'shading'
+ |  
+ |  SHADINGGROUP = 'uniform string shadinggroup'
+ |  
+ |  SHADINGINTERPOLATION = 'uniform string ShadingInterpolation'
+ |  
+ |  SHADINGRATE = 'uniform float ShadingRate'
+ |  
+ |  SHADOW = 'uniform int shadow'
+ |  
+ |  SHADOWEXCLUDESUBSET = 'uniform string shadowexcludesubset'
+ |  
+ |  SHADOWSUBSET = 'uniform string shadowsubset'
+ |  
+ |  SHINYMETAL = 'shinymetal'
+ |  
+ |  SHUTTER = 'uniform float[2] Shutter'
+ |  
+ |  SHUTTEROPENING = 'uniform float[2] shutteropening'
+ |  
+ |  SIDES = 'uniform int Sides'
+ |  
+ |  SIGMA = 'uniform int sigma'
+ |  
+ |  SIGMABLUR = 'uniform float sigmablur'
+ |  
+ |  SINC = 'sinc'
+ |  
+ |  SMOOTH = 'smooth'
+ |  
+ |  SMOOTHTRIANGLES = 'smoothtriangles'
+ |  
+ |  SOURCE = 'uniform string source'
+ |  
+ |  SPATIALGROUPING = 'uniform int spatialgrouping'
+ |  
+ |  SPECULAR = 'uniform int specular'
+ |  
+ |  SPECULARCOLOR = 'uniform color specularcolor'
+ |  
+ |  SPECULARHITMODE = 'string specularhitmode'
+ |  
+ |  SPECULARTHRESHOLD = 'uniform float specularthreshold'
+ |  
+ |  SPHERE = 'uniform float sphere'
+ |  
+ |  SPHERICALPROJECTION = 'uniform string sphericalprojection'
+ |  
+ |  SPLITMODE = 'uniform int splitmode'
+ |  
+ |  SPOTLIGHT = 'spotlight'
+ |  
+ |  SRGB = 'uniform int srgb'
+ |  
+ |  ST = 'varying float[2] st'
+ |  
+ |  STANDARD = 'standard'
+ |  
+ |  STATISTICS = 'uniform string statistics'
+ |  
+ |  STEREOPLANEDEPTHS = 'uniform string stereoplanedepths'
+ |  
+ |  STEREOPLANEOFFSETS = 'uniform string stereoplaneoffsets'
+ |  
+ |  STITCH = 'constant int stitch'
+ |  
+ |  STOCHASTIC = 'stochastic'
+ |  
+ |  STRATEGY = 'uniform string strategy'
+ |  
+ |  STREAMMARKER = 'streammarker'
+ |  
+ |  STRUCTURE = 'structure'
+ |  
+ |  STYLESHEET = 'uniform string stylesheet'
+ |  
+ |  SUBOCCLUSION = 'uniform int subocclusion'
+ |  
+ |  SUBPIXEL = 'uniform int subpixel'
+ |  
+ |  SUBWINDOW = 'uniform int[5] subwindow'
+ |  
+ |  SUSPENDRENDERING = 'suspendrendering'
+ |  
+ |  SeparableCatmullRomFilter = 'SeparableCatmullRomFilter'
+ |  
+ |  SimpleBound = 'SimpleBound'
+ |  
+ |  SincFilter = 'SincFilter'
+ |  
+ |  T = 'varying float t'
+ |  
+ |  TEXTURE = 'uniform string texture'
+ |  
+ |  TEXTURECOORDINATES = 'uniform float[8] TextureCoordinates'
+ |  
+ |  TEXTUREMEMORY = 'uniform int texturememory'
+ |  
+ |  TEXTURENAME = 'uniform string texturename'
+ |  
+ |  THREADS = 'uniform int threads'
+ |  
+ |  THRESHOLD = 'constant float __threshold'
+ |  
+ |  TIMER = 'uniform int timer'
+ |  
+ |  TO = 'uniform point to'
+ |  
+ |  TRACE = 'constant int trace'
+ |  
+ |  TRACEENABLE = 'uniform int traceenable'
+ |  
+ |  TRACEMINWIDTH = 'constant float traceminwidth'
+ |  
+ |  TRANSFORM = 'uniform matrix transform'
+ |  
+ |  TRANSIENT = 'transient'
+ |  
+ |  TRANSMISSION = 'uniform int transmission'
+ |  
+ |  TRANSMISSIONHITMODE = 'string transmissionhitmode'
+ |  
+ |  TRANSMITEXCLUDESUBSET = 'uniform string transmitexcludesubset'
+ |  
+ |  TRANSMITSUBSET = 'uniform string transmitsubset'
+ |  
+ |  TRANSPARENT = 'transparent'
+ |  
+ |  TRIANGLE = 'triangle'
+ |  
+ |  TRIM = 'trim'
+ |  
+ |  TRIMCURVE = 'trimcurve'
+ |  
+ |  TRIMDEVIATION = 'uniform float trimdeviation'
+ |  
+ |  TRUE = 1
+ |  
+ |  TriangleFilter = 'TriangleFilter'
+ |  
+ |  U = 'varying float u'
+ |  
+ |  UBASISNAME = 'constant string __ubasisname'
+ |  
+ |  UNIFORM_TRIMRANGE = 'uniform float[2] trimrange'
+ |  
+ |  UNION = 'union'
+ |  
+ |  UNKNOWN = 'unknown'
+ |  
+ |  USER = 'user'
+ |  
+ |  UVW = 'uvw'
+ |  
+ |  V = 'varying float v'
+ |  
+ |  VARSUBST = 'string varsubst'
+ |  
+ |  VBASISNAME = 'constant string __vbasisname'
+ |  
+ |  VDMAG = 'uniform float[4] vdmag'
+ |  
+ |  VERBATIM = 'verbatim'
+ |  
+ |  VERTEXEDIT = 'vertexedit'
+ |  
+ |  VIEWFRUSTUMDISTANCE = 'uniform string viewfrustumdistance'
+ |  
+ |  VISIBILITY = 'visibility'
+ |  
+ |  VISIBLEPOINTS = 'visiblepoints'
+ |  
+ |  VOLUME = 'volume'
+ |  
+ |  VOLUMEBOX = 'box'
+ |  
+ |  VOLUMECONE = 'cone'
+ |  
+ |  VOLUMECYLINDER = 'cylinder'
+ |  
+ |  VOLUMEELLIPSOID = 'ellipsoid'
+ |  
+ |  VOLUMEINTERPRETATION = 'uniform string volumeinterpretation'
+ |  
+ |  VOLUMEPIXELSAMPLES = 'uniform float[2] VolumePixelSamples'
+ |  
+ |  VPDEPTH = 'vpdepth'
+ |  
+ |  VPDEPTHSHADINGRATE = 'uniform float vpdepthshadingrate'
+ |  
+ |  VPICOLOR = 'vpicolor'
+ |  
+ |  VPIDEPTH = 'vpidepth'
+ |  
+ |  VPIMAGE = 'vpimage'
+ |  
+ |  VPINTERIORHEURISTIC = 'uniform int vpinteriorheuristic'
+ |  
+ |  VPIOBJECTID = 'vpiobjectid'
+ |  
+ |  VPRELATIVESHADINGRATE = 'uniform float vprelativeshadingrate'
+ |  
+ |  VPVOLUMEINTERSECTIONS = 'uniform int vpvolumeintersections'
+ |  
+ |  VPVOLUMES = 'vpvolumes'
+ |  
+ |  W = 'w'
+ |  
+ |  WIDTH = 'varying float width'
+ |  
+ |  WIDTHMINSEGMENTS = 'uniform int widthminsegments'
+ |  
+ |  WORLD = 'world'
+ |  
+ |  WORLDCAMERA = 'worldcamera'
+ |  
+ |  WORLDDISTANCE = 'uniform string worlddistance'
+ |  
+ |  WRITETODISK = 'writetodisk'
+ |  
+ |  XMLFILENAME = 'uniform string xmlfilename'
+ |  
+ |  YSPLITS = 'uniform int ysplits'
+ |  
+ |  Z = 'varying float z'
+ |  
+ |  ZBLUR = 'uniform float[6] zblur'
+ |  
+ |  ZCOMPRESSION = 'uniform string zcompression'
+ |  
+ |  ZFILE = 'uniform string zfile'
+ |  
+ |  ZI = 'zi'
+ |  
+ |  ZLERP = 'uniform int zlerp'
+ |  
+ |  ZTHRESHOLD = 'uniform color zthreshold'
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from Ri:
+ |  
+ |  ArchiveBegin(...)
+ |      RtConstString name,_plist_
+ |  
+ |  ArchiveEnd(...)
+ |  
+ |  ArchiveRecord(...)
+ |      RtToken type,char const* format,...
+ |  
+ |  AreaLightSource(...)
+ |      RtToken name,_plist_
+ |  
+ |  Atmosphere(...)
+ |      RtToken name,_plist_
+ |  
+ |  Attribute(...)
+ |      RtToken name,_plist_
+ |  
+ |  AttributeBegin(...)
+ |  
+ |  AttributeEnd(...)
+ |  
+ |  Basis(...)
+ |      RtBasis u,int ustep,RtBasis v,int vstep
+ |  
+ |  Begin(...)
+ |      RtToken name
+ |  
+ |  Blobby(...)
+ |      int nleaf,int ninst,int* inst,int nflt,float* flt,int nstr,RtToken* str,_plist_
+ |  
+ |  Bound(...)
+ |      RtBound bound
+ |  
+ |  Bxdf(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  Camera(...)
+ |      RtToken name,_plist_
+ |  
+ |  Clipping(...)
+ |      float nearplane,float farplane
+ |  
+ |  ClippingPlane(...)
+ |      float Nx,float Ny,float Nz,float Px,float Py,float Pz
+ |  
+ |  Color(...)
+ |      float* color
+ |  
+ |  ColorSamples(...)
+ |      int n,float* nRGB,float* RGBn
+ |  
+ |  ConcatTransform(...)
+ |      RtMatrix m
+ |  
+ |  Cone(...)
+ |      float height,float radius,float tmax,_plist_
+ |  
+ |  Context(...)
+ |      RtContextHandle ctx
+ |  
+ |  CoordSysTransform(...)
+ |      RtToken fromspace
+ |  
+ |  CoordinateSystem(...)
+ |      RtToken name
+ |  
+ |  CropWindow(...)
+ |      float left,float right,float bottom,float top
+ |  
+ |  Curves(...)
+ |      RtToken type,int ncurves,int* nvertices,RtToken wrap,_plist_
+ |  
+ |  Cylinder(...)
+ |      float radius,float zmin,float zmax,float tmax,_plist_
+ |  
+ |  Deformation(...)
+ |      RtToken name,_plist_
+ |  
+ |  DepthOfField(...)
+ |      float fstop,float length,float distance
+ |  
+ |  Detail(...)
+ |      RtBound bound
+ |  
+ |  DetailRange(...)
+ |      float minvis,float lotrans,float hitrans,float maxvis
+ |  
+ |  Disk(...)
+ |      float height,float radius,float tmax,_plist_
+ |  
+ |  Displace(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  Displacement(...)
+ |      RtToken name,_plist_
+ |  
+ |  Display(...)
+ |      char const * name,RtToken type,RtToken mode,_plist_
+ |  
+ |  DisplayChannel(...)
+ |      RtToken channel,_plist_
+ |  
+ |  DisplayFilter(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  EditAttributeBegin(...)
+ |      RtToken name
+ |  
+ |  EditAttributeEnd(...)
+ |  
+ |  EditBegin(...)
+ |      RtToken name,_plist_
+ |  
+ |  EditEnd(...)
+ |  
+ |  EditWorldBegin(...)
+ |      RtToken name,_plist_
+ |  
+ |  EditWorldEnd(...)
+ |  
+ |  Else(...)
+ |  
+ |  ElseIf(...)
+ |      char const * expr,_plist_
+ |  
+ |  EnableLightFilter(...)
+ |      RtLightHandle light,RtToken filter,RtBoolean onoff
+ |  
+ |  End(...)
+ |  
+ |  ErrorHandler(...)
+ |      RtErrorHandler handler
+ |  
+ |  Exposure(...)
+ |      float gain,float gamma
+ |  
+ |  Exterior(...)
+ |      RtToken name,_plist_
+ |  
+ |  Format(...)
+ |      int xres,int yres,float pixel_ar
+ |  
+ |  FrameAspectRatio(...)
+ |      float ar
+ |  
+ |  FrameBegin(...)
+ |      int frame
+ |  
+ |  FrameEnd(...)
+ |  
+ |  GeneralPolygon(...)
+ |      int nloops,int* nverts,_plist_
+ |  
+ |  GeometricApproximation(...)
+ |      RtToken type,float value
+ |  
+ |  Geometry(...)
+ |      RtToken name,_plist_
+ |  
+ |  GetContext(...)
+ |  
+ |  Hider(...)
+ |      RtToken name,_plist_
+ |  
+ |  HierarchicalSubdivisionMesh(...)
+ |      RtToken mask,int nf,int* nverts,int* verts,int ntags,RtToken* tags,int* nargs,int* intargs,float* floatargs,RtToken* stringargs,_plist_
+ |  
+ |  Hyperboloid(...)
+ |      RtPoint point1,RtPoint point2,float tmax,_plist_
+ |  
+ |  Identity(...)
+ |  
+ |  IfBegin(...)
+ |      char const * expr,_plist_
+ |  
+ |  IfEnd(...)
+ |  
+ |  Illuminate(...)
+ |      RtLightHandle light,RtBoolean onoff
+ |  
+ |  Imager(...)
+ |      RtToken name,_plist_
+ |  
+ |  Integrator(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  Interior(...)
+ |      RtToken name,_plist_
+ |  
+ |  Light(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  LightFilter(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  LightSource(...)
+ |      RtToken name,_plist_
+ |  
+ |  MakeBrickMap(...)
+ |      int nptcs,char const ** ptcs,char const* bkm,_plist_
+ |  
+ |  MakeBump(...)
+ |      char const * pic,char const * text,RtToken swrap,RtToken twrap,RtFilterFunc filt,float swidth,float twidth,_plist_
+ |  
+ |  MakeCubeFaceEnvironment(...)
+ |      char const * px,char const * nx,char const * py,char const * ny,char const * pz,char const * nz,char const * text,float fov,RtFilterFunc filt,float swidth,float twidth,_plist_
+ |  
+ |  MakeLatLongEnvironment(...)
+ |      char const * pic,char const * text,RtFilterFunc filt,float swidth,float twidth,_plist_
+ |  
+ |  MakeShadow(...)
+ |      char const * pic,char const * text,_plist_
+ |  
+ |  MakeTexture(...)
+ |      char const * pic,char const * text,RtToken swrap,RtToken twrap,RtFilterFunc filt,float swidth,float twidth,_plist_
+ |  
+ |  Matte(...)
+ |      RtBoolean onoff
+ |  
+ |  MotionBegin(...)
+ |      int n,...
+ |  
+ |  MotionEnd(...)
+ |  
+ |  NuPatch(...)
+ |      int nu,int uorder,float* uknot,float umin,float umax,int nv,int vorder,float* vknot,float vmin,float vmax,_plist_
+ |  
+ |  ObjectBegin(...)
+ |  
+ |  ObjectBeginV(...)
+ |      _explicitplist_
+ |  
+ |  ObjectEnd(...)
+ |  
+ |  ObjectInstance(...)
+ |      RtObjectHandle h
+ |  
+ |  ObjectInstanceV(...)
+ |      RtObjectHandle h,_explicitplist_
+ |  
+ |  Opacity(...)
+ |      float* color
+ |  
+ |  Option(...)
+ |      RtToken name,_plist_
+ |  
+ |  Orientation(...)
+ |      RtToken orient
+ |  
+ |  Paraboloid(...)
+ |      float radius,float zmin,float zmax,float tmax,_plist_
+ |  
+ |  Patch(...)
+ |      RtToken type,_plist_
+ |  
+ |  PatchMesh(...)
+ |      RtToken type,int nu,RtToken uwrap,int nv,RtToken vwrap,_plist_
+ |  
+ |  Pattern(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  Perspective(...)
+ |      float fov
+ |  
+ |  PixelFilter(...)
+ |      RtFilterFunc func,float xwidth,float ywidth
+ |  
+ |  PixelSampleImager(...)
+ |      RtToken name,_plist_
+ |  
+ |  PixelSamples(...)
+ |      float x,float y
+ |  
+ |  PixelVariance(...)
+ |      float var
+ |  
+ |  Points(...)
+ |      int nverts,_plist_
+ |  
+ |  PointsGeneralPolygons(...)
+ |      int npolys,int* nloops,int* nverts,int* verts,_plist_
+ |  
+ |  PointsPolygons(...)
+ |      int npolys,int* nverts,int* verts,_plist_
+ |  
+ |  Polygon(...)
+ |      int nverts,_plist_
+ |  
+ |  Procedural(...)
+ |      RtPointer data,RtBound bound,RtProcSubdivFunc sfunc,RtProcFreeFunc ffunc
+ |  
+ |  Procedural2(...)
+ |      RtProc2SubdivFunc sfunc,RtProc2BoundFunc bfunc,_plist_
+ |  
+ |  Projection(...)
+ |      RtToken name,_plist_
+ |  
+ |  Quantize(...)
+ |      RtToken type,int one,int min,int max,float dither
+ |  
+ |  ReadArchive(...)
+ |      RtMustBeToken name,RtArchiveCallback callback,_plist_
+ |  
+ |  RelativeDetail(...)
+ |      float rel
+ |  
+ |  Resource(...)
+ |      RtToken handle,RtToken type,_plist_
+ |  
+ |  ResourceBegin(...)
+ |  
+ |  ResourceEnd(...)
+ |  
+ |  ReverseOrientation(...)
+ |  
+ |  Rotate(...)
+ |      float angle,float dx,float dy,float dz
+ |  
+ |  SampleFilter(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  Scale(...)
+ |      float sx,float sy,float sz
+ |  
+ |  ScopedCoordinateSystem(...)
+ |      RtToken name
+ |  
+ |  ScreenWindow(...)
+ |      float left,float right,float bottom,float top
+ |  
+ |  Shader(...)
+ |      RtToken name,RtToken handle,_plist_
+ |  
+ |  ShadingInterpolation(...)
+ |      RtToken type
+ |  
+ |  ShadingRate(...)
+ |      float size
+ |  
+ |  Shutter(...)
+ |      float opentime,float closetime
+ |  
+ |  Sides(...)
+ |      int n
+ |  
+ |  Skew(...)
+ |      float angle,float d1x,float d1y,float d1z,float d2x,float d2y,float d2z
+ |  
+ |  SolidBegin(...)
+ |      RtToken op
+ |  
+ |  SolidEnd(...)
+ |  
+ |  Sphere(...)
+ |      float radius,float zmin,float zmax,float tmax,_plist_
+ |  
+ |  SubdivisionMesh(...)
+ |      RtToken mask,int nf,int* nverts,int* verts,int ntags,RtToken* tags,int* nargs,int* intargs,float* floatargs,_plist_
+ |  
+ |  Surface(...)
+ |      RtToken name,_plist_
+ |  
+ |  System(...)
+ |      char const * name
+ |  
+ |  TextureCoordinates(...)
+ |      float s1,float t1,float s2,float t2,float s3,float t3,float s4,float t4
+ |  
+ |  Torus(...)
+ |      float majrad,float minrad,float phimin,float phimax,float tmax,_plist_
+ |  
+ |  Transform(...)
+ |      RtMatrix m
+ |  
+ |  TransformBegin(...)
+ |  
+ |  TransformEnd(...)
+ |  
+ |  TransformPoints(...)
+ |      RtToken fromspace,RtToken tospace,int n,RtPoint * points
+ |  
+ |  Translate(...)
+ |      float dx,float dy,float dz
+ |  
+ |  TrimCurve(...)
+ |      int nloops,int* ncurves,int* order,float* knot,float* min,float* max,int* n,float* u,float* v,float* w
+ |  
+ |  VArchiveRecord(...)
+ |      RtToken type,char const* format,va_list vap
+ |  
+ |  VPAtmosphere(...)
+ |      RtToken name,_plist_
+ |  
+ |  VPInterior(...)
+ |      RtToken name,_plist_
+ |  
+ |  VPSurface(...)
+ |      RtToken name,_plist_
+ |  
+ |  Volume(...)
+ |      RtToken type,RtBound bound,int* dimensions,_plist_
+ |  
+ |  VolumePixelSamples(...)
+ |      float x,float y
+ |  
+ |  WorldBegin(...)
+ |  
+ |  WorldEnd(...)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes inherited from Ri:
+ |  
+ |  __new__ = <built-in method __new__ of type object>
+ |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+</pre>
+</BODY>
+</HTML>

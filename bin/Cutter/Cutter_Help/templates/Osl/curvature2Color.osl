@@ -1,0 +1,22 @@
+// A barebones example showing how to access a "builtin"
+// variable, in this case the local mean "curvature". The
+// other "types" of curvature are:
+// "curvatureU" Local principal surface curvature in u dir
+// "curvatureV" Local principal surface curvature in v dir
+shader
+curvature2color(
+    color c1 = color(1,1,1),
+	color c2 = color(1,0,0),
+	float curvatureMin = -0.3,
+	float curvatureMax = 6.0,
+	string foo = "false" 
+		[[
+		string widget = "boolean",
+		]],
+	output color resultRGB = 0)
+{
+float c = 1.0;
+getattribute("builtin", "curvature", c);
+float blend = smoothstep(curvatureMin, curvatureMax, c);
+resultRGB = mix(c1,c2,blend);
+}

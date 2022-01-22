@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pythonPanelDocument>
+  <!-- This file contains definitions of Python interfaces and the
+ interfaces menu.  It should not be hand-edited when it is being
+ used by the application.  Note, that two definitions of the
+ same interface or of the interfaces menu are not allowed
+ in a single file. -->
+  <interfacesMenu type="toolbar">
+    <interfaceItem name="labs::diff"/>
+    <interfaceItem name="sesi_quick_start"/>
+    <interfaceItem name="ViewerHandleBrowser"/>
+    <interfaceItem name="ViewerStateBrowser"/>
+    <separatorItem/>
+    <interfaceItem name="HelloPython"/>
+    <interfaceItem name="interface1"/>
+  </interfacesMenu>
+  <interface name="HelloPython" label="HelloPython" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[from PySide2 import QtWidgets
+
+def createInterface():
+     # Create a calendar widget and a label.
+     calendar = QtWidgets.QCalendarWidget()
+     title = QtWidgets.QLabel("My Calendar")
+
+     # Create a widget with a vertical box layout.
+     # Add the label and calendar to the layout.
+     root_widget = QtWidgets.QWidget()
+     layout = QtWidgets.QVBoxLayout()
+     layout.addWidget(title)
+     layout.addWidget(calendar)
+     root_widget.setLayout(layout)
+
+     # Return the top-level widget.
+     return root_widget]]></script>
+    <includeInToolbarMenu menu_position="105" create_separator="false"/>
+    <help><![CDATA[]]></help>
+  </interface>
+  <interface name="HelloPython" label="HelloPython" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[from PySide2 import QtWidgets
+
+def createInterface():
+     # Create a calendar widget and a label.
+     calendar = QtWidgets.QCalendarWidget()
+     title = QtWidgets.QLabel("My Calendar")
+
+     # Create a widget with a vertical box layout.
+     # Add the label and calendar to the layout.
+     root_widget = QtWidgets.QWidget()
+     layout = QtWidgets.QVBoxLayout()
+     layout.addWidget(title)
+     layout.addWidget(calendar)
+     root_widget.setLayout(layout)
+
+     # Return the top-level widget.
+     return root_widget]]></script>
+    <includeInToolbarMenu menu_position="105" create_separator="false"/>
+    <help><![CDATA[]]></help>
+  </interface>
+</pythonPanelDocument>

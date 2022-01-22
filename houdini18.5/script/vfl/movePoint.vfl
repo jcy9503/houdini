@@ -1,0 +1,6 @@
+sop
+movePoint(float xpos=0, ypos=0, zpos=0) {
+P.x += xpos;
+P.y += ypos;
+P.z += zpos;
+}

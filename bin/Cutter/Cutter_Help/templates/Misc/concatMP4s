@@ -1,0 +1,26 @@
+# A ffmpeg script. Joins a sequence of MP4 movies into a single MP4.
+# Save this script as, for example, concatMP4s (MacOSX and Linux), or 
+# concatMP4s.bat (Windows). Ensure the script is in the same directory as the
+# MP4 files that you wish to join.
+#
+# In the same directory as the MP4 files create a text file named, for example, 
+# "mylist.txt".
+# The mylist.txt file must specify the names of the mp4 moves you wish to join. 
+# For example, suppose you have three MP4 files named 1.mp4, 2.mp4 and 3.mp4. 
+# The mylist.txt file should contain these lines of text.
+#
+# file '1.mp4'
+# file '2.mp4'
+# file '3.mp4'
+#
+# Running the script:
+# Windows - double click the concatMP4s.bat file.
+# OSX and Linux - open a terminal and cd to the directory containing the concatMP4s
+#                 file. Use this command to add execute permissions, chmod 777 concatMP4s
+#                 Run the script using this command, ./concatMP4s
+# If the joined MP4 called "combined.mp4" is not created edit the mylist.txt file
+# so that the full path to each mp4 file is specified. For example,
+# file 'C:/Users/jdoe/mymovies/1.mp4'
+
+cd FULL_PATH_TO_THE_FOLDER_CONTAINING_THE_MP4_FILES
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy combined.mp4

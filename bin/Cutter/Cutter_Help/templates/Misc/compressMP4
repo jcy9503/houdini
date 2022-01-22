@@ -1,0 +1,11 @@
+# A ffmpeg script. Compresses a MP4 movie.
+
+# use the -crf value to change the size and quality of the output movie.
+# a value of -crf 16 will give better quality but larger file size.
+# a value of -crf 24 will give lower quality but smaller file size.
+# M.Kesson
+# 2nd Jan 2020
+
+cd FULL_PATH_TO_THE_FOLDER_CONTAINING_THE_MP4_FILE
+
+ffmpeg -i ./INPUT_NAME.mp4 -vcodec libx264 -crf 20 OUTPUT_NAME.mp4

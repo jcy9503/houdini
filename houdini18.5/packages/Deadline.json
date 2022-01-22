@@ -1,0 +1,18 @@
+{
+    "recommends": "houdini_version >= '17.5.321'",
+
+    "env": [
+        {
+            "DEADLINE": "$HOUDINI_PACKAGE_PATH/Deadline"
+        },
+        {
+            "DEADLINE_OTL": "$DEADLINE/otls"
+        },
+        {
+            "HOUDINI_OTLSCAN_PATH": "$DEADLINE_OTL;$HOUDINI_OTLSCAN_PATH"
+        }
+    ],
+    
+    "path": "$DEADLINE"
+}
+

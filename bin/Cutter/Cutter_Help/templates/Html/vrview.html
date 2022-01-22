@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VRView - YOUR_TITLE</title>
+  </head>
+<body>
+<!--
+Note the url to the image is in two parts. The first part,
+
+https://cors-anywhere.herokuapp.com/
+
+must not be changed. The second part is the full URL to your
+omnidirectional stereo image.
+-->
+<div id="vrview1"></div>
+<script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+<script>
+	window.addEventListener('load', onVrViewLoad)
+	function onVrViewLoad() {
+		var vrView = new VRView.Player('#vrview1', {
+		width: '800',
+		height: '400',
+
+		image: 'https://cors-anywhere.herokuapp.com/https://sdm.scad.edu/faculty/mkesson/VR/kitchen.jpg',
+		is_stereo: true
+		});
+	}
+</script>
+</body>
+</html>

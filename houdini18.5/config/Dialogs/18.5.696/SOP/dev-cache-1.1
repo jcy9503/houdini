@@ -1,0 +1,407 @@
+// Magic: f29ba5d1
+// Automatically generated PSI dialog (PSI version 18.5.696)
+// Mon Oct 11 21:58:41 2021
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+cache_loadfromdisk.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+cache_loadfromdisk.gad = ROW
+{
+    
+
+    PARM_BUTTON("cache_loadfromdisk", "Load from Disk     ") toggle VALUE(cache_loadfromdisk.val);
+
+    {  }
+
+}
+
+cache_reload.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    {  }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("cache_reload", "Reload")
+	push VALUE(cache_reload.val);
+
+}
+}	// Template join.bot
+
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+promoteAsset.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+promoteAsset.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    PARM_BUTTON("promoteAsset", "Promote Asset")
+	push VALUE(promoteAsset.val);
+
+}
+
+save_local.gad = ROW
+{
+    
+
+    PARM_BUTTON("save_local", "Local Output") toggle VALUE(save_local.val);
+
+    {  }
+
+}
+
+sframe.gad = ROW
+{
+    HSTRETCH
+
+    {  }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("sframe", "Single Frame") toggle VALUE(sframe.val);
+
+    { HSTRETCH }
+
+}
+}	// Template join.bot
+
+
+sopoutput.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+ sopoutput.label = PARM_LABEL("Output File", "sopoutput") WIDTH(1.5);
+
+ PARM_FIELD (pathstring, "sopoutput") LABELREF(sopoutput.label)
+	VALUE(sopoutput.val) HSTRETCH;
+
+    sopoutput.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_file" VALUE(sopoutput.plus) LOOKFLAT
+    HELP("Open floating file chooser") UI_FLAT_ICON_BTN_SIZE_SMALL;
+
+}
+
+sepparm2.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+asset.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    asset.label = PARM_LABEL("Asset Name", "asset") WIDTH(1.5);
+    PARM_FIELD(string, "asset") VALUE(asset.val) 
+	LABELREF(asset.label) HSTRETCH;
+
+}
+
+ins.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ ins.label = PARM_LABEL("Instance", "ins") WIDTH(1.5);
+ PARM(integer, 1, "ins", none, none) RANGE(0,10)
+	 LABELREF(ins.label) HSTRETCH;
+
+}
+
+res.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Resoluation", "res") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    res.menu;
+
+    { HSTRETCH }
+
+}
+
+ext.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Extension", "ext") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    ext.menu;
+
+    { HSTRETCH }
+
+}
+
+sepparm3.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+newparameter.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("newparameter", "Build Rop")
+	push VALUE(newparameter.val);
+
+}
+
+rop.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left,center)
+
+ rop.label = PARM_LABEL("ROP Node", "rop") WIDTH(1.5);
+ PARM_FIELD(pathstring, "rop") VALUE(rop.val) 
+	LABELREF(rop.label) HSTRETCH;
+
+ ACTION_ICONBUTTON "BUTTONS_jump" VALUE(rop.jump)
+    HELP("Jump to operator\nCtrl+LMB: Open parameters popup dialog")
+    UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_node" VALUE(rop.plus)
+    HELP("Open floating operator chooser") UI_FLAT_ICON_BTN_SIZE_SMALL 
+    LOOKFLAT;
+
+}
+
+cache_execute.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("cache_execute", "Save to Disk")
+	push VALUE(cache_execute.val);
+
+}
+
+cache_executebackground.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("cache_executebackground", "Save to Disk in Background")
+	push VALUE(cache_executebackground.val);
+
+}
+
+cache_trange.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Valid Frame Range", "cache_trange") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    cache_trange.menu;
+
+    { HSTRETCH }
+
+}
+
+cache_f.gad = ROW
+{
+   HSTRETCH
+
+   cache_f.label = PARM_LABEL("Start/End/Inc", "cache_f") WIDTH(1.5);
+   PARM(float, 3, "cache_f", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(cache_f.label)
+	HSTRETCH;
+
+}
+
+cache_substeps.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cache_substeps.label = PARM_LABEL("Substeps", "cache_substeps") WIDTH(1.5);
+ PARM(integer, 1, "cache_substeps", none, none) RANGE(1,10)
+	LOCK_RANGE_MIN LABELREF(cache_substeps.label) HSTRETCH;
+
+}
+
+cache_missingframe.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Missing Frame", "cache_missingframe") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    cache_missingframe.menu;
+
+    { HSTRETCH }
+
+}
+
+cache_loadtype.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Load", "cache_loadtype") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    cache_loadtype.menu;
+
+    { HSTRETCH }
+
+}
+
+cache_packedviewedit.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Display Packed As", "cache_packedviewedit") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    cache_packedviewedit.menu;
+
+    { HSTRETCH }
+
+}
+
+cache_delayload.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("cache_delayload", "Delay Load Geometry") toggle VALUE(cache_delayload.val);
+
+    { HSTRETCH }
+
+}
+
+cache_cachesize.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cache_cachesize.label = PARM_LABEL("Cache Frames", "cache_cachesize") WIDTH(1.5);
+ PARM(integer, 1, "cache_cachesize", none, none) RANGE(0,10)
+	 LABELREF(cache_cachesize.label) HSTRETCH;
+
+}
+
+cache_prefetch.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("cache_prefetch", "Pre-fetch Geometry") toggle VALUE(cache_prefetch.val);
+
+    { HSTRETCH }
+
+}
+
+folder1.gad = 
+GROUP simple "Folder Name"
+{ 
+    VALUE(folder1.gad.val) LAYOUT(vertical) HSTRETCH 
+} 
+
+folder0_1.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 "folder0_1.gad"
+    { 
+	VALUE(folder0_1.gad.val) STRETCH(1,0)
+
+	TAB "Save to File(Local)"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(2p) SPACING(2p)
+	    cache_execute.gad;		
+	    cache_executebackground.gad;		
+	    cache_trange.gad;		
+	    cache_f.gad;		
+	    cache_substeps.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Load from File"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(2p) SPACING(2p)
+	    cache_missingframe.gad;		
+	    cache_loadtype.gad;		
+	    cache_packedviewedit.gad;		
+	    cache_delayload.gad;		
+	    cache_cachesize.gad;		
+	    cache_prefetch.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+    } 
+}
+
+folder0.gad = 
+GROUP simple "Asset"
+{ 
+    VALUE(folder0.gad.val) LAYOUT(vertical) HSTRETCH 
+	    asset.gad;		
+	    ins.gad;		
+	    res.gad;		
+	    ext.gad;		
+	    sepparm3.gad;		
+	    newparameter.gad;		
+	    rop.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    cache_loadfromdisk.row.join; 
+    sepparm.gad; 
+    promoteAsset.row.join; 
+    sopoutput.gad; 
+    sepparm2.gad; 
+    folder0.gad; 
+    folder0_1.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

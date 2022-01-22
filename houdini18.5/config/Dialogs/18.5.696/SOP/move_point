@@ -1,0 +1,118 @@
+// Magic: 5cbde4fd
+// Automatically generated PSI dialog (PSI version 18.5.696)
+// Fri Oct 15 00:15:20 2021
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+vex_group.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    vex_group.label = PARM_LABEL("Point Group", "vex_group") WIDTH(1.5);
+    PARM_FIELD(string, "vex_group") VALUE(vex_group.val) 
+	LABELREF(vex_group.label) HSTRETCH;
+
+    vex_group.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+    ACTION_ICONBUTTON "BUTTONS_reselect" VALUE(vex_group.script_action)
+	HELP("Select geometry from an available viewport.\nShift-click to turn on Select Groups.")
+	UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
+
+}
+
+vex_numthreads.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Number of Threads", "vex_numthreads") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    vex_numthreads.menu;
+
+    { HSTRETCH }
+
+}
+vex_edit.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+vex_edit.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+vex_edit.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    PARM_BUTTON("vex_edit", "Edit VEX Function")
+	push VALUE(vex_edit.val);
+
+}
+
+vex_reload.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    {  }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("vex_reload", "Re-load VEX Functions")
+	push VALUE(vex_reload.val);
+
+}
+}	
+}	// Template join.bot
+
+
+xval.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ xval.label = PARM_LABEL("xval", "xval") WIDTH(1.5);
+ PARM(float, 1, "xval", none, none) RANGE(0,1)
+	 LABELREF(xval.label) HSTRETCH;
+
+}
+
+yval.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ yval.label = PARM_LABEL("yval", "yval") WIDTH(1.5);
+ PARM(float, 1, "yval", none, none) RANGE(0,1)
+	 LABELREF(yval.label) HSTRETCH;
+
+}
+
+zval.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ zval.label = PARM_LABEL("zval", "zval") WIDTH(1.5);
+ PARM(float, 1, "zval", none, none) RANGE(0,1)
+	 LABELREF(zval.label) HSTRETCH;
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    vex_group.gad; 
+    vex_numthreads.gad; 
+    vex_edit.row.join; 
+    xval.gad; 
+    yval.gad; 
+    zval.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

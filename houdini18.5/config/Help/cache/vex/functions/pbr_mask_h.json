@@ -1,0 +1,1 @@
+{"body": [{"indent": 0, "type": "para", "extent": [16, 82], "text": ["See ", {"text": "", "value": "/vex/functions/bouncemask", "fallback_text": "bouncemask()", "fullpath": "/vex/functions/bouncemask", "scheme": "Vex", "type": "link"}, " for information on component label bitmasks."]}], "type": "root", "attrs": {"type": "include"}}

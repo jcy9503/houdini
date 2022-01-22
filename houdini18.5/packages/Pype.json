@@ -1,0 +1,18 @@
+{
+    "recommends": "houdini_version >= '17.5.321'",
+
+    "env": [
+        {
+            "PYPE": "$HOUDINI_PACKAGE_PATH/Pype",
+        },
+        {
+            "PYPEOTL": "$PYPE/otls",
+        },
+        {
+            "HOUDINI_OTLSCAN_PATH": "$PYPEOTL/base;$PYPEOTL/future;$PYPEOTL/experimental;$HOUDINI_OTLSCAN_PATH",
+        },
+    ],
+    
+    "path": "$PYPE",
+}
+

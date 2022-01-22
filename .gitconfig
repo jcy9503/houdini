@@ -1,0 +1,7 @@
+[credential "https://gitlab.com"]
+	provider = generic
+[gui]
+	recentrepo = C:/HOU
+[user]
+	email = jcy9503@naver.com
+	name = jcy9503

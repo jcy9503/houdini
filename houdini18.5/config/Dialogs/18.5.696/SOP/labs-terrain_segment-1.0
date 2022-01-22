@@ -1,0 +1,403 @@
+// Magic: e434ae36
+// Automatically generated PSI dialog (PSI version 18.5.696)
+// Wed Jan  5 13:21:11 2022
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+execute.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("execute", "Render")
+	push VALUE(execute.val);
+
+}
+
+outputpath.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+ outputpath.label = PARM_LABEL("Output", "outputpath") WIDTH(1.5);
+
+ PARM_FIELD (pathstring, "outputpath") LABELREF(outputpath.label)
+	VALUE(outputpath.val) HSTRETCH;
+
+    outputpath.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_file" VALUE(outputpath.plus) LOOKFLAT
+    HELP("Open floating file chooser") UI_FLAT_ICON_BTN_SIZE_SMALL;
+
+}
+
+singlefile.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("singlefile", "Single File") toggle VALUE(singlefile.val);
+
+    { HSTRETCH }
+
+}
+sdkversion.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+sdkversion.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) 
+
+    PARM_LABEL_SIMPLE("FBX SDK Version", "sdkversion") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    sdkversion.menu;
+
+    {  }
+
+}
+
+exportascii.gad = ROW
+{
+    
+
+    {  }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("exportascii", "Export in ASCII Format") toggle VALUE(exportascii.val);
+
+    {  }
+
+}
+}	// Template join.bot
+
+
+layer.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    layer.label = PARM_LABEL("Height Layer", "layer") WIDTH(1.5);
+    PARM_FIELD(string, "layer") VALUE(layer.val) 
+	LABELREF(layer.label) HSTRETCH;
+
+    layer.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+}
+
+tilecount.gad = ROW
+{
+   HSTRETCH
+
+   tilecount.label = PARM_LABEL("Tile Count", "tilecount") WIDTH(1.5);
+   PARM(integer, 2, "tilecount", none, none, "X,Y")
+	RANGE(1,10) LOCK_RANGE_MIN LABELREF(tilecount.label)
+	HSTRETCH;
+
+}
+
+parm4.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("parm4", "Visualize") toggle VALUE(parm4.val);
+
+    { HSTRETCH }
+
+}
+
+rows.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ rows.label = PARM_LABEL("Base Density", "rows") WIDTH(1.5);
+ PARM(float, 1, "rows", none, none) RANGE(0.001,1)
+	LOCK_RANGE_MIN LABELREF(rows.label) HSTRETCH;
+
+}
+
+bZeroOneUVs.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("bZeroOneUVs", "0-1 UV per segment") toggle VALUE(bZeroOneUVs.val);
+
+    { HSTRETCH }
+
+}
+
+doextrude.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("doextrude", "Extrude Base") toggle VALUE(doextrude.val);
+
+    { HSTRETCH }
+
+}
+
+depth.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ depth.label = PARM_LABEL("Depth", "depth") WIDTH(1.5);
+ PARM(float, 1, "depth", none, none) RANGE(-10,0)
+	 LABELREF(depth.label) HSTRETCH;
+
+}
+
+basenormal.gad = ROW
+{
+   HSTRETCH
+
+   basenormal.label = PARM_LABEL("Base Normal", "basenormal") WIDTH(1.5);
+   PARM(float, 3, "basenormal", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(basenormal.label)
+	HSTRETCH;
+
+}
+
+flat.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("flat", "Flatten Base") toggle VALUE(flat.val);
+
+    { HSTRETCH }
+
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+bAdaptiveDensity.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("bAdaptiveDensity", "Adaptive Density") toggle VALUE(bAdaptiveDensity.val);
+
+    { HSTRETCH }
+
+}
+
+parm3.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ parm3.label = PARM_LABEL("Num Density Levels", "parm3") WIDTH(1.5);
+ PARM(integer, 1, "parm3", none, none) RANGE(0,10)
+	 LABELREF(parm3.label) HSTRETCH;
+
+}
+
+iterations.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ iterations.label = PARM_LABEL("Density Distribution", "iterations") WIDTH(1.5);
+ PARM(integer, 1, "iterations", none, none) RANGE(0,100)
+	 LABELREF(iterations.label) HSTRETCH;
+
+}
+
+parm2.si_rampedit = FLOAT_RAMP VALUE(parm2.ramp_val)
+			LAYOUT(horizontal)  HSTRETCH;
+
+parm2.multiramp = 
+{
+    LAYOUT(vertical) STRETCH
+
+    ROW
+    {
+	LOOK(plain) JUSTIFY(left,center) SPACING(0.1) VMARGIN(0.02) HSTRETCH
+
+	COL
+	{
+	    JUSTIFY(right,center) WIDTH(1.5)
+	    LABEL "Point No.";
+	}
+
+	parm2.pointno.gad
+	    = INT_SLIDER_FIELD VALUE(parm2.pointno.val) HSTRETCH;
+    }
+}
+
+parm2.buttons.gad = COL
+{
+    VSTRETCH
+
+    ICON_BUTTON_STRIP
+    {
+	LAYOUT(horizontal) INITSIZE(20p, 20p) 
+
+	ACTION_ICONBUTTON "BUTTONS_delete"
+		HELP("Remove Point") VALUE(parm2.delpoint.val);
+	ACTION_ICONBUTTON "BUTTONS_add"
+		HELP("Add Point") VALUE(parm2.addpoint.val);
+    }
+
+    { VSTRETCH }
+
+    ROW
+    {
+	    parm2.toggleparms.gad
+	      = ACTION_ICONBUTTON "BUTTONS_show_controls"
+		HELP("Hide Controls")
+		VALUE(parm2.toggle.val)
+		SENDSKEY("h.pane.parms.toggle_ramp_parms")
+		LOOKFLAT UI_FLAT_ICON_BTN_SIZE_TINY;
+
+	    parm2.togglerampsize.gad
+	      = ACTION_ICONBUTTON "BUTTONS_restore_mini"
+		HELP("Maximize ramp")
+		VALUE(parm2.togglerampsize.val)
+		SENDSKEY("h.pane.parms.toggle_ramp_size")
+		LOOKFLAT UI_FLAT_ICON_BTN_SIZE_TINY;
+    }
+}
+
+parm2.parm =
+{
+    LAYOUT(vertical) HSTRETCH JUSTIFY(left, center)
+
+    parm2.ramp.gad = ROW
+    {
+	MARGIN(0.02) SPACING(0.02) JUSTIFY(left, top) HSTRETCH
+
+	parm2.buttons.gad VSTRETCH;
+
+	parm2.si_rampedit HSTRETCH;
+    }
+}
+
+parm2.gad =
+{
+    LAYOUT(vertical) MARGIN(2p) HSTRETCH
+
+    {
+	LAYOUT(horizontal) HSTRETCH
+
+	PARM_LABEL_SIMPLE("Density Falloff", "parm2");
+
+	{ HSTRETCH }
+	ACTION_ICONBUTTON "BUTTONS_ramp_flip_x" VALUE(parm2.reverse.val)
+		LOOKFLAT HELP("Reverse Domain") UI_FLAT_ICON_BTN_SIZE_SMALL;
+	ACTION_ICONBUTTON "BUTTONS_ramp_flip_y" VALUE(parm2.complement.val)
+		LOOKFLAT HELP("Complement Ramp") UI_FLAT_ICON_BTN_SIZE_SMALL;
+	parm2.presets
+	    = ACTION_MENU_ICONBUTTON "BUTTONS_gear"
+		LOOKFLAT HELP("Presets") UI_FLAT_ICON_BTN_SIZE_SMALL;
+
+    }
+
+    {
+	LAYOUT(vertical) MARGIN(2p) SPACING(0.02) LOOK(darkline) HSTRETCH
+
+	parm2.parm;
+
+	SWITCHER tight
+	{
+	    LAYOUT(overlap) VALUE(parm2.hideparms.val) HSTRETCH
+	    parm2.multiramp;
+	    {}
+	}
+    }
+}
+fIteration.gad = NULL { }
+
+folder0.gad = 
+GROUP collapsible "Advanced"
+{ 
+    VALUE(folder0.gad.val) LAYOUT(vertical) HSTRETCH
+	    doextrude.gad;		
+	    depth.gad;		
+	    basenormal.gad;		
+	    flat.gad;		
+} 
+
+folder1.gad = 
+GROUP simple "Meshing"
+{ 
+    VALUE(folder1.gad.val) LAYOUT(vertical) HSTRETCH 
+	    rows.gad;		
+	    bZeroOneUVs.gad;		
+	    folder0.gad;		
+	    sepparm.gad;		
+	    bAdaptiveDensity.gad;		
+	    parm3.gad;		
+	    iterations.gad;		
+	    parm2.gad;		
+} 
+
+folder2.gad = 
+GROUP simple "Tiling"
+{ 
+    VALUE(folder2.gad.val) LAYOUT(vertical) HSTRETCH 
+	    layer.gad;		
+	    tilecount.gad;		
+	    parm4.gad;		
+} 
+
+folder4.gad = 
+GROUP collapsible "Advanced"
+{ 
+    VALUE(folder4.gad.val) LAYOUT(vertical) HSTRETCH
+	    sdkversion.row.join;		
+} 
+
+folder3.gad = 
+GROUP simple "Output"
+{ 
+    VALUE(folder3.gad.val) LAYOUT(vertical) HSTRETCH 
+	    execute.gad;		
+	    outputpath.gad;		
+	    singlefile.gad;		
+	    folder4.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    folder3.gad; 
+    folder2.gad; 
+    folder1.gad; 
+    fIteration.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

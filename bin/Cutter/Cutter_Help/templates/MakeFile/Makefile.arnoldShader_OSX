@@ -1,0 +1,2 @@
+all:
+	g++ -Wall -g -std=c++11 -I"__DEVKIT_PATH__/include" -L"__DEVKIT_PATH__/bin" -lai -dynamiclib "__CPP_SRC_PATH__" -o "__DSO_DEST_PATH__"

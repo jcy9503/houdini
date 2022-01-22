@@ -1,0 +1,38 @@
+// Magic: 5e47945f
+// Automatically generated PSI dialog (PSI version 18.5.696)
+// Sun Jan  2 18:17:05 2022
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+base_lake_height.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ base_lake_height.label = PARM_LABEL("Base Lake Height", "base_lake_height") WIDTH(1.5);
+ PARM(float, 1, "base_lake_height", none, none) RANGE(0,10)
+	 LABELREF(base_lake_height.label) HSTRETCH;
+
+}
+
+# warning cpp warning: "GenV3/subdialog.top.ui":5 Macro "PARMSPACING" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":6 Macro "LAYOUTDIR" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":7 Macro "LOOK_PLAIN" redefined.  Using later definition
+# warning cpp warning: "GenV3/subdialog.top.ui":8 Macro "DO_JUSTIFY" redefined.  Using later definition
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    base_lake_height.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

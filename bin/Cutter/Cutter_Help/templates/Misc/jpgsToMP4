@@ -1,0 +1,42 @@
+# A ffmpeg script. Create a MP4 movie from a sequence of jpgs.
+
+# The flags in use are:
+# -pattern_type glob -i '*.jpg'
+#    Ensures the input (-i) jpg image names can be (almost) any format. For example, 
+#    foo_0001.jpg or 
+#    goo.01.jpg
+#
+# -s 960x540
+#    Forces all input images to be resized to 960 pixels wide by 540 pixels height.
+#    WIDTH and HEIGHT MAY BE CHANGED BUT BE CAREFUL NOT TO INCLUDE SPACES. For example,
+#    this is wrong 960 x 540.
+#
+# -codec:v libx264
+#    Use H264 video compression. DO NOT CHANGE. 
+#
+# -pix_fmt yuv420p
+#    Color encoding. DO NOT CHANGE. 
+#    See https://en.wikipedia.org/wiki/YUV for details.
+#
+# -r 24
+#    Frame rate per second playback speed.
+#    MAY BE CHANGED.
+#
+# -framerate
+#    To set a playback rate for a slide show use -framerate 1/3
+#    between "glob" and "-i". For example,
+#    ffmpeg -pattern_type glob -framerate 1/3 -i "./*.jpg" \
+#
+#  aout.mp4
+#    Name of the output MP4 video file. THE NAME MAY BE CHANGED
+#
+# Prepared by M.Kesson April 7 2018
+#
+
+cd FULL_PATH_TO_THE_FOLDER_CONTAINING_THE_JPG_FILES
+
+# Uncomment the next line if you are using Windows
+#ffmpeg.exe -i INPUT_NAME.%%04d.jpg -s 960x540 -codec:v libx264 -r 24 -pix_fmt yuv420p OUTPUT_NAME.mp4
+
+# Uncomment the next line if you are using MacOSX or linux
+#ffmpeg -pattern_type glob -i ".INPUT_NAME/.*.jpg" -s 960x640 -codec:v libx264 -r 30 -pix_fmt yuv420p "./OUTPUT_NAME.mp4"

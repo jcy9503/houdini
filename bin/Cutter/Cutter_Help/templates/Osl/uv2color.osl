@@ -1,0 +1,10 @@
+// A barebones example showing how to access ‘uv’ texture
+// coordinates and how to output a color. The shader assumes
+// the values of ‘u’ and ‘v’ are in the range 0 to 1.
+shader
+uv2color(
+    float blueness = 1,
+    output color resultRGB = 0)
+{
+resultRGB = color(u, v, blueness);
+}

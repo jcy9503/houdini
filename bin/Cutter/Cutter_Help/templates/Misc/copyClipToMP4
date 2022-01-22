@@ -1,0 +1,10 @@
+# A ffmpeg script. Copies a clip of a MP4 movie.
+
+# The -ss seeks to 7 mins and 30 seconds.
+# The -t copies 10 mins and 15 seconds of the video clip to the OUTPUT.mp4 file.
+# The -max_muxing_queue_size 1024 is necessary to circumvent a bug in ffmpeg.
+
+# M.Kesson
+# 16 Feb 2021
+
+ffmpeg -ss 00:07:30 -i INPUT.mp4 -t 00:10:15 -c copy -max_muxing_queue_size 1024  OUTPUT.mp4

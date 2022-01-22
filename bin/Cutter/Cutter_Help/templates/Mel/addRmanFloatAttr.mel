@@ -1,0 +1,19 @@
+// Malcolm Kesson
+/* Example of use:
+   1  Select some objects.
+   2  Execute the proc.
+   3  Execute this command,
+		addRmanFloatAttr("test", 0.0, 1.0);
+*/
+global proc addRmanFloatAttr(string $name, float $min, float $max) {
+	string $fullname = "rmanF" + $name; 
+	string $tforms[] = `ls -sl -transforms`;
+	for($tform in $tforms) {
+	    if(attributeExists($fullname, $tform) == 0) {
+	        addAttr -ln $fullname -sn $fullname -k 1 $tform;
+	        }
+		$value = rand($min, $max);
+	    setAttr ($tform + "." + $fullname) $value;
+		print("Added float attribute \"" + $fullname + "\" with a value of " + $value + "\n");
+	    }
+	}
